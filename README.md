@@ -7,3 +7,5 @@
 ## 3.MEETING.md
 Đây là file tổng hợp báo cáo sau mỗi cuộc họp, bao gồm phần phản biện và kết luận chung chuẩn bị cho buổi họp tiếp theo 
 cũng như chốt hoàn thành 1 phần công việc.
+## 4.DECISIONS.md
+Đây là file ghi nhận lại những công việc đã làm được, và quyết định kế hoạch cụ thể cho phần công việc tiếp theo
