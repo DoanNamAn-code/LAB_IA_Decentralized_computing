@@ -1,0 +1,8 @@
+Tiến trình: 6/88
+
+| Nội dung kỹ thuật đã hoàn thành | Mục kiến thức trong guideline | Nội dung chi tiết | Nội dung chưa làm cùng mục |
+| :--- | :--- | :--- | :--- |
+| **An: Khởi tạo ESP/IDF qua PLATFORMIO thành công (`mcu_firmware`)** | **Tuần 1:** ESP-32 Làm quen vi điều khiển | • Bộ công cụ: ESP-IDF, PlatformIO, in log qua cổng Serial<br>• Nạp chương trình, serial monitor | • Điểm nội bật của ESP32-S3; lõi kép; Wi-fi; BLE, tập lệnh vector cho tác vụ AI<br>• Chương trình nháy LED |
+| **An: Khởi tạo cấu trúc dữ liệu của `ring_buffer` và hiện thực một số hàm làm việc của nó (`ring_buffer.c` và `ring_buffer.h`)** | **Tuần 2:** C – Con trỏ và bộ nhớ<br>**Tuần 3:** C – Lập trình nhúng | • Tách file: header và source<br>• Thực hành: thư viện vòng đệm (ring buffer) bằng C<br>• Dùng struct<br>• callback<br>• con trỏ hàm<br>• stack | • cấp phát động, union, enum, thao tác bit<br>• volatile, ngắt và hàm xử lý ngắt (ISR)<br>• heap<br>• Máy trạng thái<br>• quy tắc lập trình an toàn (MISRA C) |
+| **An: Kết nối wifi và truyền dữ liệu bằng giao thức TCP** \ Đăng: Xây dựng client server**  | **Tuần 2:** Công nghệ kết nối – Wi-fi và BLE<br>**Tuần 2:** Giao thức – Socket và HTTP | • Chế độ STA, quá trình kết nối, bảo mật WPA2/WPA3<br>• lập trình socket TCP client/server | • Chế độ AP<br>• BLE: vai trò GAP, mô hình GATT, quảng bá<br>• HTTP: Phương thức, mã trạng thái, header; REST cơ bản |
+| **Chia task, xếp ưu tiên cho hai tác vụ, dùng event group** | **Tuần 3:** ESP32-FreeRTOS | • Task, event group<br>• ưu tiên tác vụ<br>• NVS | • Lập lịch hai lõi<br>• phân vùng bộ nhớ flash<br>• semaphore, mutex, queue |
