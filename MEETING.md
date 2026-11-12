@@ -24,6 +24,8 @@
         * Điều khiển qua Terminal/ SSH.
         * Tiêu tốn ít tài nguyên lưu trữ hơn.
     * Đối với laptop Window, ta có thể dùng Unbuntu để giả lập môi trường Linux Headless và sử dụng SSH để thiết lập chế độ server - client để dễ dàng chia sẻ dữ liệu.
+* Ex:
+* ![Client Server Architecture](images/Linux_Headless.png)
     
     
 ---
