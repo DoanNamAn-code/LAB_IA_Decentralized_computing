@@ -1,16 +1,16 @@
 # ESP32 TCP Server Project
 
-## 1. Overview
+## 1. Tổng quan
 
-This project implements TCP communication between an ESP32 device (or a simulated client) and a computer acting as a TCP server.
+Dự án triển khai giao tiếp TCP giữa thiết bị ESP32 (hoặc một client mô phỏng) và máy tính đóng vai trò là TCP Server.
 
-Two server implementations are provided:
+Dự án cung cấp hai phiên bản TCP Server:
 - Python TCP Server
-- Go TCP Server
+- Go (Golang) TCP Server
 
-Both servers receive sensor data in JSON format and save the data into CSV files for further analysis.
+Cả hai Server đều có chức năng nhận dữ liệu cảm biến dưới định dạng JSON và lưu dữ liệu vào file CSV để phục vụ quá trình phân tích.
 
-## 2. Project Structure
+## 2. Cấu trúc dự án
 
 ```text
 ESP32_TCP_Project/
@@ -31,17 +31,23 @@ ESP32_TCP_Project/
     └── sensor_log.csv
 ```
 
-## 3. Data Format
+## 3. Định dạng dữ liệu
 
-The TCP servers receive newline-delimited JSON messages.
+Các TCP Server nhận dữ liệu theo định dạng JSON, mỗi thông điệp kết thúc bằng ký tự xuống dòng (newline-delimited JSON).
 
-Example:
+Ví dụ:
 
 ```json
 {"device_id":"ESP32_01","temperature":28.5,"humidity":72.3,"timestamp_ms":12500}
 ```
 
-## 4. Technologies
+Trong đó:
+- `device_id`: Mã định danh thiết bị.
+- `temperature`: Nhiệt độ đo được.
+- `humidity`: Độ ẩm đo được.
+- `timestamp_ms`: Thời gian ghi nhận dữ liệu (milliseconds).
+
+## 4. Công nghệ sử dụng
 
 - Python
 - Go (Golang)
@@ -52,27 +58,28 @@ Example:
 - Matplotlib
 - ESP32 / Embedded C
 
-## 5. Data Analysis
+## 5. Phân tích dữ liệu
 
-The Analysis module uses Pandas and Matplotlib to:
-- Read sensor data from CSV files.
-- Calculate basic statistical values.
-- Visualize temperature and humidity data.
+Module `Analysis` sử dụng Pandas và Matplotlib để:
 
-Install Python dependencies:
+- Đọc dữ liệu cảm biến từ các file CSV.
+- Tính toán các giá trị thống kê cơ bản.
+- Trực quan hóa dữ liệu nhiệt độ và độ ẩm thông qua biểu đồ.
+
+Cài đặt các thư viện Python cần thiết:
 
 ```bash
 pip install -r requirements.txt
 ```
 
-## 6. Testing
+## 6. Kiểm thử hệ thống
 
-Python test clients are provided to simulate ESP32 sensor data transmission.
+Dự án cung cấp các Python Test Client nhằm mô phỏng ESP32 gửi dữ liệu cảm biến đến TCP Server.
 
-**Note:** The TCP communication has been tested using simulated Python clients. Physical ESP32 hardware testing has not yet been completed.
+**Lưu ý:** Giao tiếp TCP hiện đã được kiểm thử bằng Python Client mô phỏng. Việc kiểm thử trên phần cứng ESP32 thực tế vẫn chưa được thực hiện.
 
-## 7. Future Improvements
+## 7. Định hướng phát triển
 
-- Test communication with a physical ESP32 device.
-- Compare Python and Go TCP server performance.
-- Extend sensor data collection and visualization.
+- Kiểm thử giao tiếp với phần cứng ESP32 thực tế.
+- So sánh hiệu năng giữa Python TCP Server và Go TCP Server.
+- Mở rộng khả năng thu thập và trực quan hóa dữ liệu cảm biến.
