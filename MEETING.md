@@ -12,10 +12,20 @@
 
 ### 1. Nam An đặt câu hỏi cho Hải Đăng
 * **Câu hỏi 1:** Ethernet là gì?
-  * *Hải Đăng trả lời:* *(Chưa cập nhật)*
+  * *Hải Đăng trả lời:*
+    * Ethernet là công nghệ kết nối mạng có dây, trong đó các thiết bị trao đổi dữ liệu với nhau thông qua cáp Ethernet (cáp đồng hoặc cáp quang).
+    * Lưu ý: Ethernet khác Internet. Với Internet là mạng lưới kết nối các thiết bị không dây quy mô toàn cầu, còn Ethernet là công nghệ kết nối mạng có dây trong khu vực nhất định.
+    * Ưu điểm: Tốc độ nhanh, ổn định, độ trễ thấp.
+    * Khuyết điểm: Tốn dây
 * **Câu hỏi 2:** Linux headless là gì?
-  * *Hải Đăng trả lời:* *(Chưa cập nhật)*
-
+  * *Hải Đăng trả lời:*
+    * Linux Headless hiểu đơn giản là ta sử dụng hệ điều hành Linux chạy trên thiết bị nhưng lại không yêu cầu sử dụng giao diện đồ họa GUI. Đặc điểm:
+        * Không cần chuột, màn hình, bàn phím (xét về khía cạnh hệ điều hành/ thiết bị).
+        * Điều khiển qua Terminal/ SSH.
+        * Tiêu tốn ít tài nguyên lưu trữ hơn.
+    * Đối với laptop Window, ta có thể dùng Unbuntu để giả lập môi trường Linux Headless và sử dụng SSH để thiết lập chế độ server - client để dễ dàng chia sẻ dữ liệu.
+    
+    
 ---
 
 ### 2. Hải Đăng đặt câu hỏi cho Nam An
