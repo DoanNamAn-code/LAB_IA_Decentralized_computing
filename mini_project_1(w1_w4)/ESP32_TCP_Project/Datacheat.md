@@ -6,7 +6,7 @@
   Nhiệt độ: 28,5 độ C.
   Độ ẩm: 60%.
 - Vậy, dữ liệu được ESP32 thu thập nhưng ESP32 không có đủ tài nguyên để xử lý và đưa ra các lệnh phức tạp, vì thế ra sẽ đưa data đó lên laptop để lưu lại, phân tích và xử lý. Vậy, làm sao để thực hiện quy trình đó?
-- Luồng dữ liệu giả định:![ESP32line](../images/ESP32line.png)
+- Luồng dữ liệu giả định:![ESP32line](../../images/ESP32line.png)
 ## 2. Các khái niệm nền tảng:
 
 ### 2.1. Network – Mạng máy tính là gì?
