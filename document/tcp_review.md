@@ -29,7 +29,9 @@ Trước khi được gửi đến tầng tiếp theo thì dữ liệu sẽ đư
 * **FIN:** Thông báo gửi hết rồi nên đóng kết nối.
 * **RST:** Ngắt kết nối ngay lập tức.
 * **PSH:** Yêu cầu hệ điều hành đẩy thẳng lên ứng dụng không giữ lại chờ đầy bộ đệm.
-
+* **URG:** Gói tin mang dữ liệu khẩn cấp.
+* **ECE:** Gói tin đang tắc nghẽn.
+* **CWR:** Giam toc do goi tin.
 ---
 
 ## 4. Mở kết nối (Bắt tay 3 bước)
