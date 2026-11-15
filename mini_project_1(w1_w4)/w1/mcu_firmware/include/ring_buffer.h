@@ -3,6 +3,7 @@
 
 #include "stdint.h"
 #include "stdbool.h"
+#include "freertos/FreeRTOS.h"
 #define BUFFER_CAPACITY 16
 
 typedef struct 
@@ -17,13 +18,14 @@ typedef struct
     SensorData data[BUFFER_CAPACITY];
     int tail;
     int head;
-    int count;
+    int count; 
+    SemaphoreHandle_t mutex;
 } ring_buffer;
 
 void init(ring_buffer *rb);
 bool rb_push(ring_buffer *rb, SensorData *item);
-void rb_push_over(ring_buffer *rb, SensorData *item);
+bool rb_push_over(ring_buffer *rb, SensorData *item);
 bool rb_pop(ring_buffer *rb, SensorData *item);
-bool rb_peek(ring_buffer *rb, SensorData *item)
+bool rb_peek(ring_buffer *rb, SensorData *item);
 
 #endif
