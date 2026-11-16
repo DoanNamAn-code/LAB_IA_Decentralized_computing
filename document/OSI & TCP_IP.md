@@ -101,7 +101,7 @@
 
 ## 4. So sánh TCP và UDP
 
-- **Giống nhau:** Đều nằm ở tầng giao vận (Transport Layer) của cả hai mô hình OSI và TCP/IP.
+- **Giống nhau:** Đều nằm ở tầng giao vận (Transport Layer) của cả hai mô hình OSI và TCP/IP. Và có cơ chế bảo mật dữ liệu tương đương nhau.
 - **Khác nhau:**
 
 | Tiêu chí | TCP | UDP |
