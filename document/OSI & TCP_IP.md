@@ -107,7 +107,7 @@
 | Tiêu chí | TCP | UDP |
 | :--- | :--- | :--- |
 | **Cơ chế kết nối** | Giao thức có thiết lập kết nối trước khi truyền dữ liệu. | Giao thức không kết nối, truyền dữ liệu ngay lập tức. |
-| **Cơ chế kiểm soát luồng** | Có. Dữ liệu được bảo vệ. | Không. Dữ liệu chấp nhận rủi ro không bảo vệ. |
+| **Cơ chế kiểm soát luồng** | Có. Dữ liệu được tin cậy. | Không. Dữ liệu chấp nhận rủi ro - không đáng tin cậy. |
 | **Tốc độ truyền tải** | Chậm hơn. | Rất nhanh. |
 | **Kích thước Header** | 20 bytes | 8 bytes |
 | **Ứng dụng thực tế** | Các ứng dụng đòi hỏi độ chính xác tuyệt đối (duyệt web, gửi thư điện tử, truyền file). | Các ứng dụng ưu tiên tốc độ theo thời gian thực, chấp nhận mất mát lượng nhỏ dữ liệu (xem video streaming, gaming). |
