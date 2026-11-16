@@ -43,7 +43,11 @@ Trước khi được gửi đến tầng tiếp theo thì dữ liệu sẽ đư
 
 ## 5. Đóng kết nối (Bắt tay 4 bước)
 Vì hai chiều truyền dữ liệu độc lập, mỗi bên phải tự đóng chiều gửi của mình bằng cặp gói `FIN` và `ACK` (tổng cộng 4 gói tin).
-
+Quy trình đóng kết nối thông thường với 04 lần trao đổi diễn ra như sau:
+1. **Client gửi FIN**: Tôi muốn kết thúc việc gửi dữ liệu.
+2. **Server gửi ACK**: Tôi đã nhận yêu cầu.
+3. **Server gửi FIN**: Tôi cũng đã hoàn thành.
+4. **Client gửi ACK**: Tôi xác nhận.
 ---
 
 ## 6. Cơ chế bảo vệ dữ liệu của TCP
