@@ -12,5 +12,8 @@ môi trường thay cho dữ liệu mẫu tạo ngẫu nhiên.
   thu thập dữ liệu trực tiếp từ môi trường cụ thể sử dụng (Camera OV7670 + ESP32)
 * Thay đổi từ truyền tin qua TCP thông thường sang truyền tin có sử dụng thêm giao thức HTTP
 ## Nhiệm vụ cụ thể sau quyết định:
-* Nam An: Thu thập dữ liệu ảnh từ camera và xây dựng http client ở ESP32
-* Hải Đăng: Xây dựng HTTP server tiếp nhận ảnh từ Nam An và hiện thị bức ảnh đó lên màn hình
+* Nam An: Thu thập dữ liệu ảnh từ camera và xây dựng http client ở ESP32; Xây dựng một mô hình mẹ dự đoán dữ liệu ảnh trên server
+* Hải Đăng: Xây dựng HTTP server tiếp nhận ảnh từ Nam An và dùng SQLite hoặc PostgreSQL và hiện thị bức ảnh đó lên màn hình \
+            Sau đó sử dụng kỹ thuật sliding window viết các hàm phân tích ba số liệu là: Độ sáng,
+            độ nét, thời gian gửi dữ liệu \
+            Cuối cùng, tạo mẫu giả lập bằng Go hoặc Python để kiểm tra các hàm phân tích đó có đang vận hành chuẩn không. 
