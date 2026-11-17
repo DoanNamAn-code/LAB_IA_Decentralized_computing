@@ -7,7 +7,9 @@
 * **Nội dung:** Hướng dẫn cài đặt, cấu hình và thao tác làm việc trên môi trường **WSL (Windows Subsystem for Linux)** kết hợp **Ubuntu**.
 
 ---
-
+* **Người trình bày:** Nam An
+* **Nội dung:** Lý thuyết về ring buffer và cách các hàm của ring buffer hoạt động; Cách tạo mẫu dữ liệu giả lập để gửi qua TCP.
+---
 ## II. Phần hỏi đáp & Phản biện
 
 ### 1. Nam An đặt câu hỏi cho Hải Đăng
@@ -40,3 +42,28 @@
   * *Nam An trả lời:*
     * Sinh dữ liệu giả lập (mock data) thay thế cho luồng dữ liệu thực tế thu thập từ cảm biến.
     * Đưa toàn bộ dữ liệu giả lập này vào `ring_buffer` để phục vụ chạy kiểm thử và xử lý tiếp theo.
+
+---
+
+# Biên bản tổng kết buổi họp (16/10/2026)
+
+---
+
+## I. Phần chia sẻ chuyên môn
+* **Người trình bày:** Hải Đăng
+* **Nội dung:** Cách mã nguồn go và python hoạt động trong việc kiểm thử và tạo lập; Lý thuyết và ứng dụng của sliding window.
+
+---
+* **Người trình bày:** Nam An
+* **Nội dung:** Cách mã nguồn kết nối tcp và wifi hoạt động, trình bày về việc thay dữ liệu giả lập sang dữ liệu thật thu thập bằng camera.
+---
+
+## II. Phần hỏi đáp & Phản biện
+
+### 1. Nam An đặt câu hỏi cho Hải Đăng
+* **Câu hỏi 1:** Sliding Window được xử lý ở giai đoạn nào và có tác dụng gì?
+  * *Hải Đăng trả lời:*
+    * 
+* **Câu hỏi 2:** Chúng ta phải chia cửa sổ hay chọn bước nhảy thế nào là tối ưu nhất?
+  * *Hải Đăng trả lời:*
+    * 
