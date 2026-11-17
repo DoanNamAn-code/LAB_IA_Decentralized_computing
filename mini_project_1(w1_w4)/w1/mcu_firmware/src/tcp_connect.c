@@ -5,8 +5,7 @@ static const char *TAG = "ESP32_TCP";
 
 //Chuyển tin bằng tcp thuần
 void tcp_client_task(void *pvParameters){
-    data* params = (data*) pvParameters;
-    ring_buffer sensor_buffer = params->sensor_buffer;
+    ring_buffer *sensor_buffer = (ring_buffer *)pvParameters;
     xEventGroupWaitBits(wifi_event_group, WIFI_CONNECTED_BIT, pdFALSE, pdTRUE, portMAX_DELAY);
     struct sockaddr_in dest_addr;
     dest_addr.sin_addr.s_addr = inet_addr(SERVER_IP);
@@ -30,16 +29,23 @@ void tcp_client_task(void *pvParameters){
         SensorData item;
         bool pending_item =  false;
         int count =  0;
+        char tx_buffer[160];
         while(1){
             if (!pending_item){
-                if(rb_pop(&sensor_buffer, &item)){
+                if(rb_pop(sensor_buffer, &item)){
                     pending_item = true;
                 } else {
                     vTaskDelay(pdMS_TO_TICKS(1000));
                     continue;
                 }
-            }
-            if (send(sock, (const char*) &item, sizeof(SensorData), 0)){
+            } else {
+            int len = snprintf(tx_buffer, sizeof(tx_buffer),
+                               "{\"device_id\":\"%s\",\"temperature\":%.2f,\"humidity\":%.2f,\"timestamp_ms\":%lu}\n",
+                               item.device_id,
+                               item.temperature,
+                               item.humidity,
+                               (unsigned long)item.timestamp_ms);
+            if (send(sock, tx_buffer, len, 0)){
                 pending_item = false;
             } else {
                 vTaskDelay(pdMS_TO_TICKS(1000));
@@ -47,7 +53,8 @@ void tcp_client_task(void *pvParameters){
             }
             if (count == 3) break;
         }
-        close(sock);
-        vTaskDelay(500);
     }
+    close(sock);
+    vTaskDelay(500);
+}
 }
