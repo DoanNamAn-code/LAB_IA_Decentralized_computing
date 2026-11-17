@@ -38,3 +38,19 @@
   - Nhận dữ liệu từ máy khác.
   - Cung cấp tài nguyên.
   - Tham gia xử lý công việc.
+---
+## 3. Định lý CAP và Nhất quán cuối cùng
+- **Định lý CAP**:
+  - **Consistency**: Mọi thiết bị biên đều đọc được cùng một dữ liệu tại cùng một thời điểm cụ thể
+  - **Availability**: Hệ thống luôn tiếp nhận và phản hồi yêu cầu kể cả quá tải
+  - **Partition Tolerance**: Hệ thống vẫn vận hành bình thường kể cả khi đường truyền mạng giữa các thiết bị bị đứt gãy
+  
+Định lý phát biểu rằng chỉ có thể hiện thực tối đa 2 trong 3 yếu tố kể trên \
+**Lưu ý**: Trong thực tế, kết nối mạng không ổn định nên chữ P được ưu tiên, vậy nên ta phải chọn giữa C và A. Để giải quyết hiện tượng này người ta đề ra giải pháp: **Nhất quán cuối cùng**
+
+- **Nhất quán cuối cùng**:
+  Chấp nhận tại một thời điểm dữ liệu lệch nhau, nhưng sau một khoảng thời gian truyền tải tất cả các nút sẽ hội tụ về cùng một trạng thái đồng nhất
+- **Đồng bộ thời gian và xử lý lỗi**:
+  - Các kỹ sư sử dụng thuật toán thứ tự sự kiện (như Lamport Timestamps hay Vector Clocks) thay vì dùng giờ hệ thống
+  - Cơ chế lỗi và phục hồi: Liên tục bắn tín hiệu nhịp tim để phát hiện một nút biên đã chết hay sống để biết đường định tuyến sang các nút khác
+
