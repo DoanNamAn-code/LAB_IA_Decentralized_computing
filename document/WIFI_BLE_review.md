@@ -2,8 +2,8 @@
 
 ### a) Chế độ hoạt động
 - **STA (Station):** Vi điều khiển đóng vai trò là một máy trạm (client), đi dò tìm và kết nối vào một Access Point (AP) hay Router có sẵn để ra Internet hoặc vào mạng LAN nội bộ.
-- **AP (Access Point):** Vi điều khiển tự phát ra một mạng Wi-Fi độc lập (Soft-AP) để các thiết bị khác (laptop, điện thoại) kết nối vào. Thường dùng để thiết lập captive portal (giao diện web nội bộ) cho việc nạp SSID/Password cấu hình mạng lần đầu. ESP32 có khả năng chạy đồng thời cả hai (chế độ `STA_AP`).
-
+- **AP (Access Point):** Vi điều khiển tự phát ra một mạng Wi-Fi độc lập (Soft-AP) để các thiết bị khác (laptop, điện thoại) kết nối vào. Thường dùng để thiết lập captive portal (giao diện web nội bộ) cho việc nạp SSID/Password cấu hình mạng lần đầu. 
+- **ESP32 có khả năng chạy đồng thời cả hai (chế độ `STA_AP`).** 
 ### b) Quá trình kết nối
 Việc một Node liên kết với Router không diễn ra tức thời mà trải qua một máy trạng thái (state machine) nghiêm ngặt:
 
