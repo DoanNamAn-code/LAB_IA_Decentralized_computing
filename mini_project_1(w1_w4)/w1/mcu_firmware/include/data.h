@@ -1,7 +1,9 @@
 #ifndef DATA_H
 #define DATA_H
-#include<stdio.h>
-#include <esp_camera.h>
+
+#include "base_lib.h"
+#include "ring_buffer.h"
+
 //Sample data 
 // #define BUFFER_CAPACITY 32
 // typedef struct 
@@ -12,9 +14,9 @@
 //     uint32_t timestamp_ms;
 // } SensorData;
 //camera data
-#define BUFFER_CAPACITY 2
 
 
-void get_sample_data(void *pvParameters);
 
+// void get_sample_data(void *pvParameters);
+void get_camera_data(void* pvParameters);
 #endif

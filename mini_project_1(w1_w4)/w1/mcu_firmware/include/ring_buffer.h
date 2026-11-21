@@ -3,14 +3,16 @@
 
 #include "stdint.h"
 #include "stdbool.h"
-#include "freertos/FreeRTOS.h"
-#include "data.h"
+#include "base_lib.h"
 
 
+
+#define BUFFER_CAPACITY 1
 
 typedef struct 
 {
     camera_fb_t *data[BUFFER_CAPACITY];
+    // SensorData *data[BUFFER_CAPACITY];
     int tail;
     int head;
     int count; 
